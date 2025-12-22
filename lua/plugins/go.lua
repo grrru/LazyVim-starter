@@ -31,4 +31,16 @@ return {
       end
     end,
   },
+  -- Disable staticcheck in gopls (it is enabled by default in the Go extra)
+  {
+    "neovim/nvim-lspconfig",
+    opts = function(_, opts)
+      opts.servers = opts.servers or {}
+      opts.servers.gopls = opts.servers.gopls or {}
+      opts.servers.gopls.settings = opts.servers.gopls.settings or {}
+      local gopls_settings = opts.servers.gopls.settings.gopls or {}
+      gopls_settings.staticcheck = false
+      opts.servers.gopls.settings.gopls = gopls_settings
+    end,
+  },
 }

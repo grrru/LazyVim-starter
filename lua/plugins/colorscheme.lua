@@ -4,7 +4,8 @@ return {
     opts = {
       -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "catppuccin-latte",
-      colorscheme = "sonokai",
+      -- colorscheme = "sonokai",
+      colorscheme = "github_dark_dimmed",
     },
   },
 
