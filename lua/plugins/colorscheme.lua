@@ -6,6 +6,7 @@ return {
       colorscheme = "catppuccin-latte",
       -- colorscheme = "sonokai",
       -- colorscheme = "github_dark_dimmed",
+      -- colorscheme = "github_dark_default"
     },
   },
 
