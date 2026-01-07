@@ -16,18 +16,14 @@ local colors = {
   fg_dim = "#98989d",
   black = "#000000",
   red = "#f78166",
-  green = "#56d364",
   yellow = "#e3b341",
   blue = "#6ca4f8",
-  magenta = "#db61a2",
   cyan = "#2b7489",
   white = "#ffffff",
   bright_black = "#4d4d4d",
   bright_red = "#f78166",
-  bright_green = "#56d364",
   bright_yellow = "#e3b341",
-  bright_blue = "#6ca4f8",
-  bright_magenta = "#db61a2",
+  bright_blue = "#00a0c9",
   bright_cyan = "#3b9dc5",
   bright_white = "#ffffff",
   selection = "#3b5070",
@@ -37,18 +33,18 @@ local colors = {
 
 vim.g.terminal_color_0 = colors.black
 vim.g.terminal_color_1 = colors.red
-vim.g.terminal_color_2 = colors.green
-vim.g.terminal_color_3 = colors.yellow
+vim.g.terminal_color_2 = colors.bright_blue
+vim.g.terminal_color_3 = colors.blue
 vim.g.terminal_color_4 = colors.blue
-vim.g.terminal_color_5 = colors.magenta
+vim.g.terminal_color_5 = colors.yellow
 vim.g.terminal_color_6 = colors.cyan
 vim.g.terminal_color_7 = colors.white
 vim.g.terminal_color_8 = colors.bright_black
 vim.g.terminal_color_9 = colors.bright_red
-vim.g.terminal_color_10 = colors.bright_green
-vim.g.terminal_color_11 = colors.bright_yellow
-vim.g.terminal_color_12 = colors.bright_blue
-vim.g.terminal_color_13 = colors.bright_magenta
+vim.g.terminal_color_10 = colors.bright_yellow
+vim.g.terminal_color_11 = colors.blue
+vim.g.terminal_color_12 = colors.blue
+vim.g.terminal_color_13 = colors.bright_yellow
 vim.g.terminal_color_14 = colors.bright_cyan
 vim.g.terminal_color_15 = colors.bright_white
 
@@ -68,7 +64,7 @@ hl("FloatTitle", { fg = colors.blue, bg = colors.bg_alt, bold = true })
 hl("Cursor", { fg = colors.cursor_text, bg = colors.cursor })
 hl("CursorLine", { bg = colors.bg_highlight })
 hl("CursorColumn", { bg = colors.bg_highlight })
-hl("CursorLineNr", { fg = colors.yellow, bg = colors.bg_highlight, bold = true })
+hl("CursorLineNr", { fg = colors.blue, bg = colors.bg_highlight, bold = true })
 hl("LineNr", { fg = colors.bright_black, bg = colors.bg })
 hl("SignColumn", { bg = colors.bg })
 hl("FoldColumn", { fg = colors.bright_black, bg = colors.bg })
@@ -78,10 +74,10 @@ hl("WinSeparator", { fg = colors.bg_highlight })
 hl("VertSplit", { fg = colors.bg_highlight })
 hl("Visual", { bg = colors.selection })
 hl("VisualNOS", { bg = colors.selection })
-hl("Search", { fg = colors.bg, bg = colors.yellow, bold = true })
+hl("Search", { fg = colors.bg, bg = colors.blue, bold = true })
 hl("IncSearch", { fg = colors.bg, bg = colors.blue, bold = true })
 hl("CurSearch", { fg = colors.bg, bg = colors.blue, bold = true })
-hl("MatchParen", { fg = colors.yellow, bg = colors.bg_highlight, bold = true })
+hl("MatchParen", { fg = colors.blue, bg = colors.bg_highlight, bold = true })
 hl("Pmenu", { fg = colors.fg, bg = colors.bg_alt })
 hl("PmenuSel", { fg = colors.bg, bg = colors.blue, bold = true })
 hl("PmenuSbar", { bg = colors.bg_highlight })
@@ -94,10 +90,10 @@ hl("TabLineSel", { fg = colors.fg, bg = colors.bg_highlight, bold = true })
 hl("TabLineFill", { bg = colors.bg_alt })
 hl("Title", { fg = colors.blue, bold = true })
 hl("Directory", { fg = colors.blue })
-hl("Question", { fg = colors.green, bold = true })
-hl("MoreMsg", { fg = colors.green, bold = true })
+hl("Question", { fg = colors.bright_blue, bold = true })
+hl("MoreMsg", { fg = colors.bright_blue, bold = true })
 hl("ModeMsg", { fg = colors.blue, bold = true })
-hl("WarningMsg", { fg = colors.yellow, bold = true })
+hl("WarningMsg", { fg = colors.blue, bold = true })
 hl("ErrorMsg", { fg = colors.red, bold = true })
 hl("NonText", { fg = colors.bright_black })
 hl("Whitespace", { fg = colors.bright_black })
@@ -107,8 +103,8 @@ hl("QuickFixLine", { fg = colors.fg, bg = colors.bg_highlight, bold = true })
 
 hl("Comment", { fg = colors.fg_dim, italic = true })
 hl("Constant", { fg = colors.blue })
-hl("String", { fg = colors.green })
-hl("Character", { fg = colors.green })
+hl("String", { fg = colors.bright_blue })
+hl("Character", { fg = colors.bright_blue })
 hl("Number", { fg = colors.blue })
 hl("Boolean", { fg = colors.blue })
 hl("Float", { fg = colors.blue })
@@ -126,56 +122,56 @@ hl("Include", { fg = colors.red })
 hl("Define", { fg = colors.red })
 hl("Macro", { fg = colors.red })
 hl("PreCondit", { fg = colors.red })
-hl("Type", { fg = colors.yellow })
-hl("StorageClass", { fg = colors.yellow })
-hl("Structure", { fg = colors.yellow })
-hl("Typedef", { fg = colors.yellow })
+hl("Type", { fg = colors.blue })
+hl("StorageClass", { fg = colors.blue })
+hl("Structure", { fg = colors.blue })
+hl("Typedef", { fg = colors.blue })
 hl("Special", { fg = colors.fg })
 hl("SpecialChar", { fg = colors.fg })
 hl("Delimiter", { fg = colors.fg })
 hl("SpecialComment", { fg = colors.fg_dim })
 hl("Debug", { fg = colors.fg })
-hl("Tag", { fg = colors.green })
+hl("Tag", { fg = colors.bright_blue })
 hl("Underlined", { fg = colors.blue, underline = true })
 hl("Ignore", { fg = colors.bright_black })
 hl("Error", { fg = colors.red })
-hl("Todo", { fg = colors.magenta, bg = colors.bg_alt, bold = true })
+hl("Todo", { fg = colors.yellow, bg = colors.bg_alt, bold = true })
 
-hl("DiffAdd", { fg = colors.green, bg = colors.bg_alt })
-hl("DiffChange", { fg = colors.yellow, bg = colors.bg_alt })
+hl("DiffAdd", { fg = colors.bright_blue, bg = colors.bg_alt })
+hl("DiffChange", { fg = colors.blue, bg = colors.bg_alt })
 hl("DiffDelete", { fg = colors.red, bg = colors.bg_alt })
 hl("DiffText", { fg = colors.blue, bg = colors.bg_highlight, bold = true })
 
 hl("DiagnosticError", { fg = colors.red })
-hl("DiagnosticWarn", { fg = colors.yellow })
+hl("DiagnosticWarn", { fg = colors.blue })
 hl("DiagnosticInfo", { fg = colors.blue })
 hl("DiagnosticHint", { fg = colors.fg_dim })
 hl("DiagnosticVirtualTextError", { fg = colors.red, bg = colors.bg_alt })
-hl("DiagnosticVirtualTextWarn", { fg = colors.yellow, bg = colors.bg_alt })
+hl("DiagnosticVirtualTextWarn", { fg = colors.blue, bg = colors.bg_alt })
 hl("DiagnosticVirtualTextInfo", { fg = colors.blue, bg = colors.bg_alt })
 hl("DiagnosticVirtualTextHint", { fg = colors.fg_dim, bg = colors.bg_alt })
 hl("DiagnosticUnderlineError", { undercurl = true, sp = colors.red })
-hl("DiagnosticUnderlineWarn", { undercurl = true, sp = colors.yellow })
+hl("DiagnosticUnderlineWarn", { undercurl = true, sp = colors.blue })
 hl("DiagnosticUnderlineInfo", { undercurl = true, sp = colors.blue })
 hl("DiagnosticUnderlineHint", { undercurl = true, sp = colors.fg_dim })
 hl("DiagnosticSignError", { fg = colors.red })
-hl("DiagnosticSignWarn", { fg = colors.yellow })
+hl("DiagnosticSignWarn", { fg = colors.blue })
 hl("DiagnosticSignInfo", { fg = colors.blue })
 hl("DiagnosticSignHint", { fg = colors.fg_dim })
 
 hl("LspReferenceText", { bg = colors.bg_highlight })
 hl("LspReferenceRead", { bg = colors.bg_highlight })
 hl("LspReferenceWrite", { bg = colors.bg_highlight })
-hl("LspSignatureActiveParameter", { fg = colors.yellow, bold = true })
+hl("LspSignatureActiveParameter", { fg = colors.blue, bold = true })
 
-hl("GitSignsAdd", { fg = colors.green })
-hl("GitSignsChange", { fg = colors.yellow })
+hl("GitSignsAdd", { fg = colors.bright_blue })
+hl("GitSignsChange", { fg = colors.blue })
 hl("GitSignsDelete", { fg = colors.red })
 
 hl("SpellBad", { undercurl = true, sp = colors.red })
 hl("SpellCap", { undercurl = true, sp = colors.blue })
 hl("SpellLocal", { undercurl = true, sp = colors.blue })
-hl("SpellRare", { undercurl = true, sp = colors.yellow })
+hl("SpellRare", { undercurl = true, sp = colors.blue })
 
 link("@comment", "Comment")
 link("@string", "String")
