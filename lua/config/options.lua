@@ -4,5 +4,7 @@
 
 local opt = vim.opt
 
-opt.relativenumber = false -- Relative line numbers
+opt.relativenumber = false
 opt.tabstop = 4
+
+vim.diagnostic.enable(false)
