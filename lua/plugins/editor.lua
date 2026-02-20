@@ -4,7 +4,8 @@ return {
     event = "LazyFile",
     opts = {
       mode = "topline", -- 'cursor' 'topline'
-      max_lines = 2,
+      max_lines = 1,
+      trim_scope = "inner",
     },
   },
   {

@@ -7,12 +7,26 @@ return {
         virtual_text = {
           severity = { min = vim.diagnostic.severity.ERROR },
         },
+        signs = {
+          severity = { min = vim.diagnostic.severity.ERROR },
+        },
       },
       servers = {
         gopls = {
           settings = {
             gopls = {
               gofumpt = false,
+            },
+          },
+        },
+        pyright = {
+          settings = {
+            python = {
+              analysis = {
+                typeCheckingMode = "basic",
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+              },
             },
           },
         },
