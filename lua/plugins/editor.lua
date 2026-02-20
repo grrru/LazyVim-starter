@@ -21,4 +21,12 @@ return {
       vim.keymap.set("n", "];", dropbar_api.select_next_context, { desc = "Select next context" })
     end,
   },
+  {
+    "folke/zen-mode.nvim",
+    opts = {
+      plugins = {
+        tmux = { enabled = true },
+      },
+    },
+  },
 }
