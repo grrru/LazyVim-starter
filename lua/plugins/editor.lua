@@ -30,4 +30,37 @@ return {
       },
     },
   },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = function(_, opts)
+      opts.sections.lualine_c = {
+        {
+          "filename",
+          file_statusus = true,
+          path = 0,
+        },
+      }
+    end,
+  },
+  {
+    "akinsho/bufferline.nvim",
+    opts = function(_, opts)
+      opts.options.indicator = {
+        style = "none",
+      }
+      -- opts.options.separator_style = "slant"
+
+      opts.options.diagnostics_indicator = function(_, _, diag)
+        local icons = LazyVim.config.icons.diagnostics
+        if diag.error then
+          return " " .. icons.Error .. diag.error
+        end
+        return ""
+      end
+
+      opts.options.always_show_bufferline = true
+      opts.options.show_buffer_close_icons = false
+      opts.options.show_close_icon = false
+    end,
+  },
 }
