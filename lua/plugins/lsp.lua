@@ -4,6 +4,9 @@ return {
     opts = {
       inlay_hints = { enabled = false },
       diagnostics = {
+        underline = {
+          severity = { min = vim.diagnostic.severity.ERROR },
+        },
         virtual_text = {
           severity = { min = vim.diagnostic.severity.ERROR },
         },
