@@ -22,13 +22,14 @@ return {
             },
           },
         },
-        pyright = {
+        basedpyright = {
           settings = {
-            python = {
+            basedpyright = {
               analysis = {
                 typeCheckingMode = "basic",
                 autoSearchPaths = true,
                 useLibraryCodeForTypes = true,
+                autoImportCompletions = true,
               },
             },
           },

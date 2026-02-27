@@ -6,3 +6,6 @@ local opt = vim.opt
 
 opt.relativenumber = true
 opt.tabstop = 4
+opt.clipboard = "unnamedplus"
+
+vim.g.lazyvim_python_lsp = "basedpyright"
