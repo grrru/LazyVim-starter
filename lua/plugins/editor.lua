@@ -7,6 +7,11 @@ return {
       max_lines = 2,
       trim_scope = "inner",
     },
+    config = function(_, opts)
+      require("treesitter-context").setup(opts)
+      vim.api.nvim_set_hl(0, "TreesitterContextBottom", { underline = false })
+      vim.api.nvim_set_hl(0, "TreesitterContextLineNumberBottom", { underline = false })
+    end,
   },
   {
     "Bekaboo/dropbar.nvim",
@@ -59,7 +64,6 @@ return {
       end
 
       opts.options.always_show_bufferline = true
-      opts.options.show_buffer_close_icons = false
       opts.options.show_close_icon = false
       opts.options.max_name_length = 30
     end,
