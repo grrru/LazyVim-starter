@@ -20,5 +20,13 @@ return {
         },
       },
     },
+    image = {
+      enabled = true,
+      doc = {
+        inline = true,
+        float = false,
+      },
+      formats = { "png", "jpg", "jpeg", "gif", "webp", "pdf", "mp4", "mov", "bmp", "tiff" },
+    },
   },
 }
