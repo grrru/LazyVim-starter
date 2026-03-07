@@ -41,7 +41,7 @@ return {
       opts.sections.lualine_c = {
         {
           "filename",
-          file_statusus = true,
+          file_status = true,
           path = 0,
         },
       }
